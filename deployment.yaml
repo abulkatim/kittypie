@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pieshop
+  name: kittypie
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: pieshop
+      app: kittypie
   template:
     metadata:
       labels:
-        app: pieshop
+        app: kittypie
     spec:
       containers:
         - name: pieshop
-          image: gcr.io/abulkatim/pieshop:latest
+          image: 
           ports:
             - containerPort: 80
           resources:
