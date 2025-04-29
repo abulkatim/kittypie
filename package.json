@@ -1,7 +1,7 @@
 {
     "name": "pie-shop",
     "version": "1.0.0",
-    "description": "React-приложение для заказа пирожков с котиком из TheCatAPI",
+    "description": "Pieshop on React + TheCatAPI",
     "scripts": {
       "dev": "vite",
       "build": "vite build",
