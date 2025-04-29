@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pieshop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pieshop
+  template:
+    metadata:
+      labels:
+        app: pieshop
+    spec:
+      containers:
+        - name: pieshop
+          image: gcr.io/abulkatim/pieshop:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+      imagePullSecrets:
+        - name: gcr-json-key
